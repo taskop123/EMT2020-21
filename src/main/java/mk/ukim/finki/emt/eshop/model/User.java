@@ -35,8 +35,8 @@ public class User implements UserDetails {
     @Enumerated(value = EnumType.STRING)
     private Role role;
 
-    @ManyToOne
-    private Discount discount;
+    @ManyToMany
+    private List<Discount> discounts;
 
     // default:
     // to-one -> FetchType.EAGER
